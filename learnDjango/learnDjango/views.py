@@ -1,10 +1,12 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
-def home(response):
-    return HttpResponse("Hello . This is home page.")
+def home(request):
+    # return HttpResponse("Hello . This is home page.")
+     return render(request, 'website/index.html')
 
-def about(response):
+def about(request):
     return HttpResponse("Hello . This is about page.")
 
-def projects(response):
+def projects(request):
     return HttpResponse("Hello . This is projects page.")
