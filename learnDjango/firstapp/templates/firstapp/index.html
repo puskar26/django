@@ -1,4 +1,16 @@
-{% extends "template.html" %} {% block title %} Django App {% endblock %}
+{% extends "template.html" %}
+<!--prettier-ignore -->
+{% block title %} 
+Django App 
+{% endblock %}
+<!--prettier-ignore -->
 {%block content %}
-<h1>THis is a Django App.</h1>
+<!--prettier-ignore -->
+{% for hero in heroes %}
+<div class="hero-item">
+  <img src="{{hero.image.url}}" alt="" />
+  <p>{{hero.name}}</p>
+</div>
+{% endfor %}
+<!--prettier-ignore -->
 {% endblock %}
